@@ -8,3 +8,6 @@
 # Ignore all files with a certain extension
 *~
 \#*\#
+
+# Directories
+node_modules/
