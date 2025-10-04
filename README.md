@@ -6,7 +6,7 @@ Web AI tool that will fire off a request to write a letter and print the respons
 - Install the minimalist live-server npm package (or any other mini webserver that can handle CORS)
 
 ```shell
-npm -i live-server
+npm i live-server
 live-server --no-browser --cors
 ```
 
