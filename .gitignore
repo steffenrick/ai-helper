@@ -1,0 +1,10 @@
+# This is a comment
+
+# Ignore a specific file
+.dir-locals.el
+.prettierrc
+.project
+
+# Ignore all files with a certain extension
+*~
+#*#

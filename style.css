@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+.lato-light {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.lato-regular {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lato-bold {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.lato-light-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.lato-regular-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.lato-bold-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+body {
+  /* background: url('SfE_logo_round-1-300x300.png'), linear-gradient(to top right, #3498db, #2980b9); */
+  /* background-image: linear-gradient(to top right, LavenderBlush, WhiteSmoke); */
+  background: url('SfE_logo_round-1-300x300.png')
+}
+
+.main {
+  /* background: url('SfE_logo_round-1-300x300.png'); */
+  margin: 2rem;
+  padding: 1rem;
+}
+
+.header_oval {
+  /* display: flex; */
+  /* background-color: #3498db; */
+  background-color: FloralWhite;
+  /* background-color: MediumPurple; */
+  /* border-radius: 50%; */
+  /* border-radius: 1rem; */
+  border-radius: clamp(4px, 1vw, 12px);
+  box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem rgba(0,0,0,0.7);
+  border-style: inset;
+  border-width: 0.3rem;
+  border-color: #8b008b;
+  /* margin: 1rem; */
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  /* margin: auto; */
+  padding: 2rem;
+  /* width: 75%; */
+}
+
+.oval_title_box {
+  display: flex;
+  justify-content: center;
+}
+
+.input_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem;
+}
+
+.column_container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.3rem;
+}
+
+.column_container > hr {
+  width: 100%;
+}
+
+.l_address {
+  display: flex;
+  flex-direction: column;
+}
+
+.input_person {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  column-gap: 1rem;
+}
+
+.input_button {
+  margin-top: 1rem;
+  margin-left: 1.4rem;
+}
+
+.results_box {
+  background: FloralWhite;
+  padding: 1rem;
+  border-radius: clamp(4px, 1vw, 12px);
+  box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem rgba(0,0,0,0.7);
+  border-style: inset;
+  border-width: 0.3rem;
+  border-color: #8b008b;
+}
+
+.results_box > span {
+  opacity: 0.3;
+}

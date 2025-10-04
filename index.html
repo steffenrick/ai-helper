@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="script.js"></script>
+    <title>The AI - Helper</title>
+</head>
+
+<body>
+    <div class="main lato-regular">
+        <div class="header_oval">
+            <div class="oval_title_box">
+                <h2>Enter a URL to fetch content from!</h2>
+            </div>
+            <div class="input_box">
+                <div class="column_container">
+                    <input name="target_url" class="target_url" type="url" value="" size="80" placeholder="Enter URL here.." required />
+                    <hr />
+                    <p>You need to enter as minimum a valid address, for the automatic lookup of your MP to
+                        work. The others can be left empty.</p>
+                    <div class="input_address">
+                        <label class="l_address">Address:
+                            <input name="address" class="inp_address" size="80" type="text" value="" placeholder="Your address..." required />
+                        </label>
+                    </div>
+                    <div class="input_person">
+                        <label>Full name:
+                            <input name="person_name" class="inp_name" size="30" type="text" value="" placeholder="Your name..." />
+                        </label>
+                        <label>Email:
+                            <input name="person_email" class="inp_email" size="50" type="email" value="" placeholder="Your email..." />
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="input_button">
+                <input name="btn_getIt" class="btn_getIt" type="button" value="Let's go!" />
+            </div>
+        </div>
+        <div class="results_box">
+            <span>Letter will show here. Please give it a moment.</span>
+        </div>
+    </div>
+</body>
+
+</html>

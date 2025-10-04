@@ -1,0 +1,40 @@
+* YouTube video explaining the ChatGPT prompt
+  [[https://www.youtube.com/watch?v=BCLSWHcN1wg][https://www.youtube.com/watch?v=BCLSWHcN1wg]]
+* Url of the page explaining the custom ChatGPT prompt
+  [[https://www.taxresearch.org.uk/Blog/2025/06/20/chatgpt-prompt-for-a-letter-to-your-mp/][https://www.taxresearch.org.uk/Blog/2025/06/20/chatgpt-prompt-for-a-letter-to-your-mp/]]
+* Text of the ChatGPT prompt
+  #+begin_src text
+    My name is [Insert].
+
+    My email address is [Insert]. I am happy to correspond electronically.
+
+    My address is [Insert in full, including postcode].
+
+    Please identify my MP based on my above-noted address, making sure you are identifying the MP elected in July 2024 or since then, if a by-election has been held. Double check you have identified my MP correctly using this website. https://members.parliament.uk/FindYourMP
+
+    I want you to write a letter to my MP.
+
+    The letter should raise my concerns about the issues raised in this blog post [Insert blog post url].
+
+    The text of the blog post in question is [Copy the post to here].
+
+    I would like you to:
+
+	Include a title in the letter based on the primary issue addressed in this post.
+	Summarise the concerns raised in the blog post using numbered paragraphs. If you wish to highlight the subject of each paragraph using bold text in its first sentence, please feel free to do so.
+	You do not need to reference the source material, but can if you want to do so.
+	Summarise the issues arising from the concerns, again using numbered paragraphs, and again using bold text in the first sentence of each paragraph to highlight what the issue arising is, if you think it appropriate.
+	Ask the MP to take action. Please feel free to generate possibilities within the range of those normally open to an MP, but you might wish to mention:
+	    Raising the issue with a minister
+	    Asking a question in the House
+	    Tabling an Early Day Motion
+	    Supporting a Commons committee investigating the issue
+	    Raising the matter with an All Party Parliamentary Group
+	Ask the MP to provide feedback on actions taken and responses received.
+
+    The tone of the letter should be polite and confident but should make it clear that a response is expected, as is action.
+
+    Please include my MP's full address. Add today's date to the letter. Put the title after the salutation. Put my name and address in the opening paragraph as MPs need to know that information.
+
+    Thank you for your assistance.
+  #+end_src
