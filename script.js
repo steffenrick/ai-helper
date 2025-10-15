@@ -9,7 +9,7 @@ class App {
   #inpEmail = document.querySelector('.inp_email')
   #btnGetIt = document.querySelector('.btn_getIt')
   #resultsBox = document.querySelector('.results_box')
-  #apiKey = 'AIzaSyDwkq3d6zSZlkiOaVDPaWB2tNG7oYO0NXU'
+  #apiKey = ''
   #aiInstructions = `
     My name is [Insert_name].
 
