@@ -11,3 +11,7 @@ live-server --no-browser --cors
 ```
 
 - Go to http://127.0.0.1:8080 in your browser
+
+## Api key
+
+- Contact [me](mailto:steffen.rick@gmail.com "mail me") if you need the api key
