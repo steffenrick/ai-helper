@@ -8,7 +8,9 @@ class App {
   #inpName = document.querySelector('.inp_name')
   #inpEmail = document.querySelector('.inp_email')
   #btnGetIt = document.querySelector('.btn_getIt')
+  #btnCopyContent = document.querySelector('.btn_copy_content')
   #resultsBox = document.querySelector('.results_box')
+  #resultsBoxLetter = document.querySelector('.results_box_letter')
   #apiKey = ''
   #aiInstructions = `
     My name is [Insert_name].
@@ -45,7 +47,7 @@ class App {
   
   constructor () {
     this.#btnGetIt.addEventListener('click', this._getUrl.bind(this))
-    // this._queryGoogleAi()
+    this.#btnCopyContent.addEventListener('click', this._copyToClipboard.bind(this))
   }
 
   async _getUrl () {
@@ -56,14 +58,6 @@ class App {
     console.log(tgtUrl)
 
     try {
-      // const response = await fetch(tgtUrl)
-      
-      // if (!response.ok) {
-      //       throw new Error(`HTTP error! status: ${response.status}`);
-      // }
-
-      // const data = await response.text()
-      // console.log(data)
       const text = this._replacePlaceholders({
 	name,
 	email,
@@ -72,14 +66,13 @@ class App {
       })
       console.log(text)
 
-      // Write info message
-      this._updateResultsBox({updateText: 'Querying Google AI..'})
+      // Add the class while generating
+      this.#resultsBoxLetter.classList.add('generating')
+      // Clear and prepare for streaming
+      this._updateResultsBox({ updateText: 'Generating...\n\n' })
 
       // Query Google AI
-      const res = await this._queryGoogleAi(text)
-
-      // Write response
-      this._updateResultsBox({updateText: res})
+      await this._queryGoogleAi(text)
 
     } catch (err) {
       console.error(err.message)
@@ -111,26 +104,41 @@ class App {
       },
       tools
     }
-    const response = await ai.models.generateContent({
-      // model: "gemini-2.5-flash-lite",
+
+    const stream = await ai.models.generateContentStream({
       model: "gemini-2.5-pro",
-      // model: "gemini-2.5-flash",
-      // contents: "Explain how AI works in a few words",
-      // config: {
-      //   thinkingConfig: {
-      //     thinkingBudget: 0, // Disables thinking
-      //   }
-      // },
       config,
       contents: queryData
     })
-    // console.log(response.text)
-    console.log('AI request complete')
-    return response.text
+
+    let fullText = ''
+    
+    // Remove the class and update with real content
+    this.#resultsBoxLetter.classList.remove('generating')
+    
+    for await (const chunk of stream) {
+      const chunkText = chunk.text
+      fullText += chunkText
+      // Update with full text so far
+      this._updateResultsBox({ updateText: fullText })
+    }
+  
+    console.log('AI streaming complete')
   }
 
-  _updateResultsBox ({updateText}) {
-    this.#resultsBox.innerText = updateText
+  _updateResultsBox ({ updateText }) {
+    this.#resultsBoxLetter.innerText = updateText
+  }
+
+  async _copyToClipboard (event) {
+    console.log('Copy button clicked!', event)
+    try {
+      const text = this.#resultsBoxLetter.innerText
+      await navigator.clipboard.writeText(text)
+      alert('Copied to clipboard!')
+    } catch (err) {
+      console.log(err)
+    }
   }
 }
 
