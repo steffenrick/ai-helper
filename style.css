@@ -61,8 +61,8 @@ body {
   border-style: inset;
   border-width: 0.3rem;
   border-color: #8b008b;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  /* margin-left: 2rem; */
+  /* margin-right: 2rem; */
   margin-top: 1rem;
   margin-bottom: 1rem;
   padding: 2rem;
@@ -76,8 +76,8 @@ body {
     border-style: inset;
     border-width: 0.3rem;
     border-color: #8b008b;
-    margin-left: 0.2rem;
-    margin-right: 0.2rem;
+    /* margin-left: 0.2rem; */
+    /* margin-right: 0.2rem; */
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     padding: 0.5rem;
@@ -129,9 +129,6 @@ body {
   min-width: 0;
 }
 
-/* .inp_name {
-   width: 100%;
-   } */
 
 .l_email {
   display: flex;
@@ -140,13 +137,14 @@ body {
   min-width: 0;
 }
 
-/* .inp_email {
-   width: 100%;
-   } */
-
 .input_button {
   margin-top: 1rem;
-  margin-left: 1.4rem;
+  /* margin-left: 1.4rem; */
+}
+
+.button_box {
+  margin: 0.15rem;
+  /* padding-left: 1rem; */
 }
 
 .results_box {
@@ -161,4 +159,15 @@ body {
 
 .results_box > span {
   opacity: 0.3;
+}
+
+.generating {
+  color: #666;
+  font-style: italic;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
 }
